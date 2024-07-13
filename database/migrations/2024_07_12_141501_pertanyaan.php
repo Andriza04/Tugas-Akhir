@@ -13,7 +13,16 @@ class Pertanyaan extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('pertanyaan', function (Blueprint $table) {
+            $table->id();
+            $table->string('judul');
+            $table->string('isi');
+            $table->timestamps();
+            $table->bigInteger('user_id')->unsigned();
+        });
+        Schema::table('pertanyaan', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate("cascade");
+        });
     }
 
     /**

@@ -1,9 +1,10 @@
 # Tugas-Akhir
-Anggota Kelompok 2
+Anggota Kelompok 2-
 Fharaz Al Azizya
 Muhammad Fakhri Andriza
 Riva'i Sheva
 Sayeed Al Aziziyah
+-
 link Video
 -
 link Gambar

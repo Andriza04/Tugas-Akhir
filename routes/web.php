@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PertanyaanController;
+use App\Http\Controllers\profileController;
+use App\Http\Controllers\tampilController;
+use App\Http\Controllers\ForumController;
+use GuzzleHttp\Middleware;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +19,39 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/postlogin', [AuthController::class, 'postlogin']);
+Route::get('/register', [AuthController::class, 'register']);
+Route::post('/postregister', [AuthController::class, 'postregister']);
+Route::get('/logout', [AuthController::class, 'logout']);
+
+Route::middleware(['web','auth', 'role:admin'])->group(function () {
+    Route::get('/', [profileController::class, 'index']);
+    // table pertanyaan
+    Route::resource('Pertanyaan', PertanyaanController::class);
+    Route::get('/pertanyaan/{show}', [profileController::class, 'ShowPertanyaan']); // show admin untuk pertanyaan user
+    Route::get('/jawaban/{show}', [profileController::class, 'ShowJawaban']); // show admin untuk jawaban user
+    Route::resource('profile', profileController::class);
+
 });
+
+
+Route::middleware(['auth', 'role:users,admin','web'])->group(function () {
+    Route::get('/', [tampilController::class, 'index']);
+    Route::get('/forum/create', [ForumController::class, 'create']);
+    Route::get('/forum/show/{id}', [ForumController::class, 'show']);
+    Route::post('/forum/store', [ForumController::class, 'store']);
+    Route::post('/forum/komentar_pertanyaan/{id}', [ForumController::class, 'komentar_pertanyaan']);
+    Route::get('/forum/edit/{id}', [ForumController::class, 'edit']); // edit
+    Route::get('/forum/edit2/{id}', [ForumController::class, 'edit2']);
+    Route::post('/forum/update/{id}', [ForumController::class, 'update']); // update
+    Route::patch('/forum/update/{id}', [ForumController::class, 'update2']);
+    Route::post('/forum/hapus/{id}', [ForumController::class, 'destroy']); // delete
+    Route::delete('/forum/hapus/{id}', [ForumController::class, 'destroy2']);
+    Route::get('/following/{id}', [ForumController::class, 'follower']);
+    Route::get('/unfollow/{id}', [ForumController::class, 'unfollow']);
+    Route::get('//profile_user/{id}', [profileController::class, 'showProfil']); 
+});
+
+
+
