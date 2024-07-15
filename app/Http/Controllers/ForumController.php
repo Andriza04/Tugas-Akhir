@@ -91,4 +91,8 @@ class ForumController extends Controller
         
         return back()->with('Error', 'data anda berhasil di hapus');
     }
+    public function destroy($id){
+        Pertanyaan::where('id', $id)->delete();
+        return redirect('/')->with('eror', 'data anda berhasil di hapus');
+    }
 }

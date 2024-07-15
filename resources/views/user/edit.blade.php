@@ -13,11 +13,11 @@
             @csrf
             <div class="card-body">
                  <div class="form-group">
-                     <label for="judul">Masukan judul</label>
-                    <input type="text" class="form-control  @error('judul') is-invalid @enderror" name="judul" placeholder="masukan judul" id="judul" value="{{$pertanyaan->judul}}">
+                     <label for="judul">Masukkan judul</label>
+                    <input type="text" class="form-control  @error('judul') is-invalid @enderror" name="judul" placeholder="masukkan judul" id="judul" value="{{$pertanyaan->judul}}">
                 </div>
                 <div class="form-group">
-                        <label for="exampleInputPassword1">Masukan pertanyaan anda</label>
+                        <label for="exampleInputPassword1">Masukkan pertanyaan anda</label>
                         <textarea name="isi" id="isi" class="form-control my-editor">{{$pertanyaan->isi}}</textarea>
                         @error('isi')
                         <div class="invalid-feedback mt-2">{{ $message }}</div>
@@ -29,8 +29,8 @@
                                 <button class="btn btn-primary btn-sm">{{$tag->tag_name ? $tag->tag_name:'No tags' }}</button>
                                 @endforeach
                 </div>
-                    <a href="/forum/show/{{$pertanyaan->id}}" type="submit" class="btn btn-light mt-3">kembali</a>
-                <button type="submit" class="btn btn-light mt-3">Submit</button>
+                    <a href="/forum/show/{{$pertanyaan->id}}" type="submit" class="btn btn-light mt-3">Kembali</a>
+                <button type="submit" class="btn btn-light mt-3">Kirim</button>
             </div>
             <!-- /.card-body -->
         </form>

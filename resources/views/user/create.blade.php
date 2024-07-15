@@ -5,7 +5,7 @@
 @section('content')
     <section class="card" style="background: #29b6f6;">
         <div class="card-header">
-            <h3 class="card-title text-dark">Masukan pertanyaan anda</h3>
+            <h3 class="card-title text-dark">Masukkan pertanyaan anda</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -13,11 +13,11 @@
             @csrf
             <div class="card-body">
                  <div class="form-group">
-                     <label for="judul">Masukan judul</label>
-                    <input type="text" class="form-control  @error('judul') is-invalid @enderror" name="Judul" placeholder="masukan judul" id="judul">
+                     <label for="judul">Masukkan judul</label>
+                    <input type="text" class="form-control  @error('judul') is-invalid @enderror" name="Judul" placeholder="masukkan judul" id="judul">
                 </div>
                 <div class="form-group">
-                        <label for="exampleInputPassword1">Masukan pertanyaan anda</label>
+                        <label for="exampleInputPassword1">Masukkan pertanyaan anda</label>
                         <textarea name="isi" id="isi" class="form-control my-editor"></textarea>
                         @error('isi')
                         <div class="invalid-feedback mt-2">{{ $message }}</div>
@@ -27,8 +27,8 @@
                     <label for="tags">Hashtag</label>
                     <input type="text" class="form-control" id="tags" name="tags">
                 </div>
-                <a href="/" type="submit" class="btn btn-light mt-3">kembali</a>
-                <button type="submit" class="btn btn-light mt-3" id="create">Submit</button>
+                <a href="/" type="submit" class="btn btn-light mt-3">Kembali</a>
+                <button type="submit" class="btn btn-light mt-3" id="create">Kirim</button>
             </div>
             <!-- /.card-body -->
         </form>

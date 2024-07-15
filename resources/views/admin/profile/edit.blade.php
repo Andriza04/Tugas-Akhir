@@ -12,7 +12,7 @@
                     @method('PUT')
                     <div class="form-group">
                         <label for="exampleInputEmail1">Username</label>
-                        <input type="text" class="form-control  @error('username') is-invalid @enderror" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama profile"
+                        <input type="text" class="form-control  @error('username') is-invalid @enderror" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan nama profile"
                         value="{{$user->name}}">
                         @error('username')
                         <div class="invalid-feedback mt-2">{{ $message }}</div>
@@ -20,14 +20,14 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nama profile</label>
-                        <input type="text" class="form-control  @error('nama_lengkap') is-invalid @enderror" name="nama_lengkap" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama profile" value="{{$user->profile->nama_lengkap}}">
+                        <input type="text" class="form-control  @error('nama_lengkap') is-invalid @enderror" name="nama_lengkap" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan nama profile" value="{{$user->profile->nama_lengkap}}">
                         @error('nama_lengkap')
                         <div class="invalid-feedback mt-2">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Email</label>
-                        <input type="text" class="form-control  @error('email') is-invalid @enderror" name="email" id="exampleInputPassword1" placeholder="Masukan pertanyaan"
+                        <input type="text" class="form-control  @error('email') is-invalid @enderror" name="email" id="exampleInputPassword1" placeholder="Masukkan pertanyaan"
                         value="{{$user->email}}">
                         @error('email')
                         <div class="invalid-feedback mt-2">{{ $message }}</div>

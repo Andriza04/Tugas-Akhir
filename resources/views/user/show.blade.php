@@ -45,7 +45,7 @@
                 <!-- /.attachment-block -->
 
                 <!-- Social sharing buttons -->
-                <span class="float-right text-muted">{{$pertanyaan->komentar_pertanyaan->count()}} comments</span>
+                <span class="float-right text-muted">{{$pertanyaan->komentar_pertanyaan->count()}} Komentar</span>
             </div>
             <!-- /.card-body -->
         {{-- {awal komentar --}}
@@ -74,7 +74,7 @@
                 <img class="img-fluid img-circle img-sm" src="{{auth()->user()->profile->getAvatar()}}" alt="Alt Text">
                 <!-- .img-push is used to add margin to elements next to floating images -->
                 <div class="img-push">
-                    <input type="text" name="komentar" class="form-control form-control-sm" placeholder="Press enter to post comment">
+                    <input type="text" name="komentar" class="form-control form-control-sm" placeholder="Tekan enter untuk memposting komentar">
                 </div>
                 </form>
             </div>

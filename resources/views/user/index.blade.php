@@ -2,7 +2,7 @@
 @section('content')
 <div class="card">
 <div class="card-header">
-    <p style="text-align: left; font-size:30px; margin-top:25px">Mulai Membuat Pertanyaan<br>
+    <p style="text-align: left; font-size:30px; margin-top:25px; font-family: 'Poppins', sans-serif;">Mulai Membuat Pertanyaan<br>
         <a href="/forum/create" type="submit" class="btn btn-primary text-white btn-md text-dark" style="border-radius:50px; margin-bottom:25px" >Yuk Tanya</a>
     </p>
 </div>
@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <div class="media forum-item">
                             <a href="" data-toggle="collapse" data-target=".forum-content"><img src="{{$tanya->user->profile->getAvatar()}}" class="mr-3 rounded-circle" width="50" alt="User" /></a>
-                            <div class="media-body">
+                            <div class="media-body" style="font-family: 'Poppins', sans-serif;">
                                 <h6><a href="/forum/show/{{$tanya->id}}"  class="text-bold">{{$tanya->judul}}</a></h6>
                                 {{-- <p class="text-secondary">
                                     {!!$tanya->isi!!}
