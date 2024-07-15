@@ -10,8 +10,7 @@ Sayeed Al Azizi
 
 link Video
 
-link Gambar:
-
+# link Gambar:
 https://dbdiagram.io/d/668cd6899939893dae6874f2
 -
 Penjelasan:
