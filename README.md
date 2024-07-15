@@ -1,4 +1,4 @@
-Nama Project : Ayok diskusi
+# Nama Project : Ayok diskusi
 
 Anggota Kelompok 2
 Fharaz Al Azizya
@@ -8,27 +8,16 @@ Sayeed Al Azizi
 
 github : https://github.com/Andriza04/Tugas-Akhir
 
-link Video
-<<<<<<< HEAD
-=======
 
-# link Gambar:
-https://dbdiagram.io/d/668cd6899939893dae6874f2
--
-Penjelasan:
-Web yang kami buat merupakan forum diskusi yang dimana kita dapat mengirimkan postingan berupa topik atau pertanyaan yang kemudian dapat di lihat dan di tanggapi orang lain mengenai topik atau pertanyaan yang di posting oleh orang lain
->>>>>>> 0bd9e0124527fbe8e71ecb5974654d807c4c429f
+Link Gambar dan Video : https://drive.google.com/drive/folders/1OvwGRrhlqj5WjgO5LWF4kC_C1eSKLL-z?usp=drive_link
 
-link Gambar: https://dbdiagram.io/d/668cd6899939893dae6874f2
-
-link Website: https://ayokdiskusi.online
-
+Link Website : https://ayokdiskusi.online
 
 
 Penjelasan:
 Web yang kami buat merupakan forum diskusi yang dimana kita dapat mengirimkan postingan berupa topik yang kemudian dapat di lihat dan di tanggapi orang lain mengenai topik yang di posting oleh orang lain, untuk mengakses opsi admin bisa menggunakan admin@gmail.com dan sandi 1234.
 
-yang digunakan:
+file tambahan yang digunakan:
 Boostrap 4
 AdminLTE
 sweetalert
