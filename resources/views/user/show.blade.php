@@ -1,6 +1,7 @@
 @extends('layout.home')
 @section('title')
-    <title>Twitter</title>
+    <title>Ayok diskusi
+    </title>
 @endsection
 @section('header')
   <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js/hsli39z7puehvf2y0z8yveor6lnjr4n801nblg3n39gnaovg"></script>
@@ -25,9 +26,9 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" role="menu">
                     <a href="/forum/edit/{{$pertanyaan->id}}" class="dropdown-item">Edit</a>
-                    <form action="/forum/hapus/{{$pertanyaan->id}}" method="POST">
+                    <form action="/forum/hapus/{{$pertanyaan->id}}" method="POST" id="delete-{{ $pertanyaan->id }}">
                         @csrf
-                        <input type="submit" value="Delete" class="dropdown-item btn btn-light btn-sm">
+                        <input type="submit" value="Hapus" class="dropdown-item btn btn-light btn-sm" id="delete">
                     </form>
                     </div>
                 </div>
@@ -85,7 +86,29 @@
 
 @endsection
 @section('footer')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+$(function() {
+      $(document).on('click', '#delete-{{ $pertanyaan->id }}', function(e) {
+        e.preventDefault()
+        let link = $(this).attr('action')
+
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+          if (result.value) {
+            document.getElementById('delete-{{ $pertanyaan->id }}').submit(); // Submit the form if confirmed
+          }
+        });
+      })
+    })
+  
  var editor_config = {
 path_absolute : "/",
 selector: "textarea.my-editor",

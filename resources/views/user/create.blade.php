@@ -9,23 +9,23 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="/forum/store" method="POST" enctype="multipart/form-data">
+        <form action="/forum/store" name="form" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                  <div class="form-group">
                      <label for="judul">Masukkan judul</label>
-                    <input type="text" class="form-control  @error('judul') is-invalid @enderror" name="Judul" placeholder="masukkan judul" id="judul">
+                    <input type="text" required class="form-control  @error('judul') is-invalid @enderror" name="Judul" placeholder="masukkan judul" id="judul">
                 </div>
                 <div class="form-group">
                         <label for="exampleInputPassword1">Masukkan pertanyaan anda</label>
-                        <textarea name="isi" id="isi" class="form-control my-editor"></textarea>
+                        <textarea name="isi" id="isi" required class="form-control my-editor"></textarea>
                         @error('isi')
                         <div class="invalid-feedback mt-2">{{ $message }}</div>
                         @enderror
                     </div>
                 <div class="form-group">
                     <label for="tags">Hashtag</label>
-                    <input type="text" class="form-control" id="tags" name="tags">
+                    <input type="text" class="form-control" id="tags" requied name="tags">
                 </div>
                 <a href="/" type="submit" class="btn btn-light mt-3">Kembali</a>
                 <button type="submit" class="btn btn-light mt-3" id="create">Kirim</button>
@@ -69,7 +69,7 @@
         });
         }
     };
-
+    
     $(function() {
         $(document).on('click', '#create', function(e) {
             let link = $(this).attr('action')

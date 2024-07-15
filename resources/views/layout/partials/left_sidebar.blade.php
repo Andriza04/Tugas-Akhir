@@ -10,9 +10,6 @@
     .sidebar, .brand-text, .nav-link, .dropdown-item-title {
         font-family: 'NamaFont', sans-serif; /* Gantilah 'NamaFont' dengan nama font yang Anda gunakan */
     }
-    .nav-link:hover {
-        color: #ffffff !important;
-    }
 </style>
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: #9274ff;">
@@ -58,14 +55,9 @@
                                 </a>
                             </li>
                         @endif
-                        <style>
-                            .nav-link:hover {
-                                color: #ffffff !important;
-                                /* Change text color to white on hover */
-                            }
-                        </style>
                         <li class="nav-item">
-                            <a href="/logout" class="nav-link font-weight-bold text-white" onclick="">
+                            <a href="/logout" class="nav-link font-weight-bold text-dark" onclick="">
+                                <i class="far fa-circle nav-icon"></i>
                                 Log out
                             </a>
                         </li>
