@@ -28,8 +28,8 @@
                         <td>{{$pro->role}}</td>
                         <td class="justify-content-center d-flex">
                             {{-- <a href="profile/{{$pro->id}}" class="btn  btn-success">SHOW</a> --}}
-                            <a href="profile/{{$pro->id}}/edit" class="btn  btn-primary">Edit Akun</a>
-                            <form action="profile/{{$pro->id}}" method="POST" class="d-inline" id="delete-{{ $pro->id }}">
+                            <a href="profile/{{ $pro->id }}/edit" class="btn  btn-primary">Edit Akun</a>
+                            <form action="profile/{{ $pro->id }}" method="POST" class="d-inline" id="delete-{{ $pro->id }}">
                                 @method('delete')
                                 @csrf
                             <button  class="submit btn badge-danger">Hapus Akun</button>
@@ -124,5 +124,6 @@ $(function() {
         });
       })
     })
+  
 </script>
 @endsection
